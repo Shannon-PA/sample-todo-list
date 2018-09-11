@@ -1,7 +1,7 @@
 <h1>My ToDo List:</h1>
 <ul>
-  <li *ngFor="let listItem of list" (click)="removeItem(listItem)">
-    {{ listItem }}
+  <li *ngFor="let listItem of todoService.Todos" (click)="removeItem(listItem.id)">
+    {{ listItem.todo }}
   </li>
 </ul>
 <input type=text [(ngModel)]="newToDoItem"/>
